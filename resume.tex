@@ -1,0 +1,220 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,letterpaper]{article}
+
+% Set the page margins.
+\usepackage[letterpaper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Brandon Chong}{}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent
+\href{mailto:bschong2.at.illinois.dot.edu}{bschong2\mbox{}@\mbox{}illinois.edu}
+\sbull
+\href{tel:555-555-5555}{818-661-8088}
+% \\
+% 1010 W. Stoughton\sbull
+% 61801\thinspace {\sc Urbana}\sbull
+% Illinois\sbull
+
+% \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+% \roottitle{Objective}  % a root section title
+
+% \vspace{-1.3em}  % some vertical spacing
+
+% \begin{multicols}{2}  % open a multicolumn environment
+% \noindent \emph{To obtain a 2015 summer internship in computer science to gain first hand experience in working with a team of
+% coders and contributing to a project}
+% \\
+% \\
+% I am a sophomore in the College of Engineering at the Univeristy of Illinois at Urbana-Champaign studying Computer Science. Many ask me "Why Computer Science?". Computer Science is not like the other sciences in the sense that one does not sit in a lab, mix chemicals and take measurements. In fact, if I told a "scientist" that the fundamental laws of nature do not directly affect the outcome of my "experiments", then they would say that what I do is not even a science. But before I even took a physics, chemistry or biology course, there was me sitting in my math class solving quadractic formulas. I saw a friend of mine punching numbers into his ti-84 and write down solutions and finish his problem set before I solved my first problem. I asked him how and he then showed me how to program the quadratic formula into the calculator. It was at this moment that I knew Computer Science can make people's lives better and that is why I pursue this field of knowledge.
+% \end{multicols}
+% \spacedhrule{0em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://www.illinois.edu/}{University of Illinois at Urbana-Champaign}}
+  {\textsc{
+    %Cumulative GPA: 3.38/4
+    }} {
+  \headedsubsection
+    {Bachelor of Science in Computer Science }
+    {2013 -- Present}
+    {\bodytext{
+        Courses (* = ongoing):\\
+        % CS 125 - Intro to Computer Science,
+        % CS 173 - Discrete Structures,
+        % CS 196 - Freshmen Honors (for CS 125),
+        % CS 225 - Data Structures,
+        % CS 233 - Computer Architecture,
+        % CS 241 - Systems Programming,
+        % CS 296 - Honors Course (for CS 233),
+        % ALL 100 and 200 Level Courses,
+        % CS 357 - Numerical Methods I (Ongoing),
+        % CS 374 - Algorithms and Models of Computation,
+        % CS 411 - Database Systems,
+        % CS 412 - Introduction to Data Mining (Ongoing),
+        % CS 446 - Machine Learning (Ongoing),
+        % CS 447 - Natural Language Processing (Ongoing),
+        % CS 461 - Computer Security I (Ongoing),
+        % CS 498 - Art and Science of Web Prog,
+        % Math 241 Honors - Calculus III,
+        % Math 415 - Applied Linear Algebra,
+        % Math 463/ Stat 400 - Statistics and Probability I
+        \bgroup
+        \setlength{\tabcolsep}{18pt}
+        \begin{tabular}{lll}
+         ALL 100 and 200 Level Courses & Numerical Methods* & Algorithms \\ 
+         Database Systems & Data Mining* & Machine Learning* \\  
+         Natural Language Processing* & Computer Security* & Web Programming    
+        \end{tabular}
+        \egroup
+        }
+    }
+    \headedsubsection
+    {Minor in Statistics (Attempting)}
+    {2013 -- Present}
+    {
+    % \bodytext{
+        % Courses Taken / Credited for: 
+        % Stat 100 - Statistics,
+        % Stat 200 - Statistical Analysis,
+        % Stat 400 - Statistics and Probability I,
+        % Stat 420 - Methods of Applied Statistics,
+        % Math 415 - Applied Linear Algebra
+        }
+    }
+  
+% \headedsection
+%   {\href{http://www.hw.com/}{Harvard-Westlake High School}}
+%   {\textsc{Cumulative GPA : 3.7/5.0}} {
+% }
+
+\spacedhrule{0.5em}{-0.4em}
+\roottitle{Development Skills}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Programing Languages}
+  {\textsc{}} {%
+
+    {\bodytext{Complied: Java, C++, C\#, C}}
+    {\bodytext{Web Development: HTML, CSS, Javascript and jQuery, PHP, SQL, Python}}
+    % {\bodytext{Assembly: MIPS}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Software, Frameworks, Random Stuff}
+  {\textsc{}} {%
+
+    {\bodytext{
+    \LaTeX,
+    Visual Studio 2013,
+    MEAN Stack (MongoDB, Express, AngularJS, Node.js), 
+    ASP.NET Framework 4.0 and MVC,
+    Microsoft SQL Studio Management and PHPMyAdmin,
+    Terminal and Command Prompt,
+    GitHub and Subversion}}
+}
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Experience}
+\headedsection
+  {\href{http://www.epic.com/}{Epic Systems Corporation}}
+  {\textsc{Madison, Wisconsin}} {%
+  \headedsubsection
+    {Software Developer and Intern}
+    {May \apo15 -- Aug \apo15}
+    {\bodytext{I worked on "SlicerDicer", which is a reporting tool for doctors to find sets of patients they work with. In order to allow doctors to determine if the difference between patients is statistically significant I integrated hypothesis testing into Epic's MSFT Stack. By extending Epic's HTML5 Canvas Graph API I fused  statistics with data visualization to provide critical information in a UI/UX friendly manner.}}
+}
+\headedsection
+  {\href{http://brandonchong.net/\#Experience}{University of Illinois}}
+  {\textsc{Urbana-Champaign, Illinois}} {%
+  \headedsubsection
+    {Teaching Assistant for System Programming, Discrete Math, and Intro Programming}
+    {Sep \apo14 -- Present}
+    {\bodytext{During my time as a teaching assistant for several core courses at UIUC I have participated in numerous aspects related to enhancing a student's experience at my university. I fulfill my duties as a teaching assistant with great passion, since I love learning and what to instill that passion in all of my students. I have made myself a critical part of many course staffs and do everything from teaching to developing content and even managing course staff.}}
+}
+\headedsection
+  {\href{http://nmsigroup.com/}{NMSI, Inc.}}
+  {\textsc{Los Angeles, California}} {%
+  \headedsubsection
+    {Software Developer Intern }
+    {May \apo14 -- Aug \apo14}
+    {\bodytext{Maintained a loan origination system for a wholesale mortgage company and provided I.T. assistance. The loan origination system was an ASP.NET web application and I used Visual Studio for the front end. The database was a MSSQL Server and I maintained this along with a Windows Server hosting the web application.}}
+}
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Projects}
+\headedsection
+  {\href{}{Cheating Detector for Programming Courses}}
+  {\textsc{Jan \apo15 -- Present}} {
+    
+}
+\headedsection
+  {\href{}{Automated Software Testing Infrastructure for Programming Courses }}
+  {\textsc{Jan \apo15 -- Present}} {
+}
+\headedsection
+  {\href{}{Remote Office Hours}}
+  {\textsc{Aug\apo15 -- Present}} {
+}
+\headedsection
+  {\href{}{Github Wikibook to PDF Converter}}
+  {\textsc{Jan \apo15 -- Aug\apo15}} {
+}
+\headedsection
+  {\href{}{Automatic Course Registeration Program}}
+  {\textsc{Dec \apo14 }} {
+}
+
+
+\vspace{-0.2em}
+\begin{center}
+    Last update on \today\\
+  \emph{\small Please refer to my \href{http://www.brandonchong.net}{Website} for a more detailed explanation of my experiences and projects along with some live demos.}\\
+  \href{http://www.brandonchong.net}{www.brandonchong.net} 
+\end{center}
+%\spacedhrule{1.6em}{-0.4em}
+
+%\roottitle{Interests}
+
+%\inlineheadsection
+%  {Non-exhaustive and in alphabetical order:}
+%  {art, Buddhim, cryptography, Go (board game), history, music, open source, philosophy, software engineering (methodologies), travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX}-design and vegetarian/vegan cooking.}
+
+
+\end{document}

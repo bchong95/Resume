@@ -1,270 +1,201 @@
 %
 % LaTeX source of my resume
-% =========================
-%
-% Heavily commented to to fit even LaTeX beginners (hopefully).
-%
-% See the `README.md` file for more info.
-%
-% This file is licensed under the CC-NC-ND Creative Commons license.
 %
 
-
-% Start a document with the here given default font size and paper size.
 \documentclass[10pt,letterpaper]{article}
 
-% Set the page margins.
 \usepackage[letterpaper,margin=0.75in]{geometry}
-
-% Setup the language.
 \usepackage[english]{babel}
-\hyphenation{Some-long-word}
+\usepackage{resume}  % Your custom resume macros
+\usepackage{hyperref}  % For clickable links
+\sloppy
 
-% Makes resume-specific commands available.
-\usepackage{resume}
+\begin{document}
 
-
-
-
-\begin{document}  % begin the content of the document
-\sloppy  % this to relax whitespacing in favour of straight margins
-
-
-% title on top of the document
 \maintitle{Brandon Chong}{}
 
-\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+\nobreakvspace{0.3em}
 
-% \noindent prevents paragraph's first lines from indenting
-% \mbox is used to obfuscate the email address
-% \sbull is a spaced bullet
-% \href well..
-% \\ breaks the line into a new paragraph
 \noindent
 \href{mailto:bschong2.at.illinois.dot.edu}{bschong2\mbox{}@\mbox{}illinois.edu}
 \sbull
 \href{tel:555-555-5555}{818-661-8088}
-% \\
-% 1010 W. Stoughton\sbull
-% 61801\thinspace {\sc Urbana}\sbull
-% Illinois\sbull
-
-% \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
-
-% \roottitle{Objective}  % a root section title
-
-% \vspace{-1.3em}  % some vertical spacing
-
-% \begin{multicols}{2}  % open a multicolumn environment
-% \noindent \emph{To obtain a 2015 summer internship in computer science to gain first hand experience in working with a team of
-% coders and contributing to a project}
-% \\
-% \\
-% I am a sophomore in the College of Engineering at the Univeristy of Illinois at Urbana-Champaign studying Computer Science. Many ask me "Why Computer Science?". Computer Science is not like the other sciences in the sense that one does not sit in a lab, mix chemicals and take measurements. In fact, if I told a "scientist" that the fundamental laws of nature do not directly affect the outcome of my "experiments", then they would say that what I do is not even a science. But before I even took a physics, chemistry or biology course, there was me sitting in my math class solving quadractic formulas. I saw a friend of mine punching numbers into his ti-84 and write down solutions and finish his problem set before I solved my first problem. I asked him how and he then showed me how to program the quadratic formula into the calculator. It was at this moment that I knew Computer Science can make people's lives better and that is why I pursue this field of knowledge.
-% \end{multicols}
-% \spacedhrule{0em}{-0.4em}
 
 \roottitle{Education}
 
 \headedsection
-{\href{http://www.illinois.edu/}{University of Illinois at Urbana-Champaign}}
-{\textsc{
-	%Cumulative GPA: 3.38/4
-	}} {
-\headedsubsection
-{Bachelor of Science in Computer Science}
-{August 2013 -- May 2017}
-{\bodytext{
-	Advanced Coursework:\\
-	% CS 125 - Intro to Computer Science,
-	% CS 173 - Discrete Structures,
-	% CS 196 - Freshmen Honors (for CS 125),
-	% CS 225 - Data Structures,
-	% CS 233 - Computer Architecture,
-	% CS 241 - Systems Programming,
-	% CS 296 - Honors Course (for CS 233),
-	% ALL 100 and 200 Level Courses,
-	% CS 357 - Numerical Methods I (Ongoing),
-	% CS 374 - Algorithms and Models of Computation,
-	% CS 411 - Database Systems,
-	% CS 412 - Introduction to Data Mining (Ongoing),
-	% CS 446 - Machine Learning (Ongoing),
-	% CS 447 - Natural Language Processing (Ongoing),
-	% CS 461 - Computer Security I (Ongoing),
-	% CS 498 - Art and Science of Web Prog,
-	% Math 241 Honors - Calculus III,
-	% Math 415 - Applied Linear Algebra,
-	% Math 463/ Stat 400 - Statistics and Probability I
-	\bgroup
-	\setlength{\tabcolsep}{18pt}
-	\begin{tabular}{lll}
-		Algorithms I and II 	& Distributed Systems		& Programming Languages	 \\
-		Database Systems			& Data Mining						& Machine Learning \\
-		Numerical Methods			& Security							& Web Programming
-    \end{tabular}
-	\egroup
-	}
-}
-}
+  {\href{http://www.illinois.edu/}{University of Illinois at Urbana-Champaign}}
+  {
+    \textsc{
+      % Cumulative GPA: 3.38/4
+    }\\
+    \headedsubsection
+      {Bachelor of Science in Computer Science}
+      {August 2013 -- May 2017}
+    % Optional: add coursework here
+    % \bodytext{
+    % Advanced Coursework:\\
+    % CS 125 - Intro to Computer Science,
+    % CS 173 - Discrete Structures,
+    % CS 196 - Freshmen Honors (for CS 125),
+    % CS 225 - Data Structures,
+    % CS 233 - Computer Architecture,
+    % CS 241 - Systems Programming,
+    % CS 296 - Honors Course (for CS 233),
+    % ALL 100 and 200 Level Courses,
+    % CS 357 - Numerical Methods I (Ongoing),
+    % CS 374 - Algorithms and Models of Computation,
+    % CS 411 - Database Systems,
+    % CS 412 - Introduction to Data Mining (Ongoing),
+    % CS 446 - Machine Learning (Ongoing),
+    % CS 447 - Natural Language Processing (Ongoing),
+    % CS 461 - Computer Security I (Ongoing),
+    % CS 498 - Art and Science of Web Programming,
+    % Math 241 Honors - Calculus III,
+    % Math 415 - Applied Linear Algebra,
+    % Math 463/Stat 400 - Statistics and Probability I
+    % }
+  }
 
-
-% \headedsection
-%   {\href{http://www.hw.com/}{Harvard-Westlake High School}}
-%   {\textsc{Cumulative GPA : 3.7/5.0}} {
-% }
-
-% \spacedhrule{0.5em}{-0.4em}
-% \roottitle{Development Skills}
-%
-% \headedsection  % sets the header for the section and includes any subsections
-% {Programing Languages}
-% {\textsc{}} {%
-%
-% 	{\bodytext{Java, C, C++, C\#, Python, Haskell}}
-% 	{\bodytext{Web Development: HTML, CSS, Javascript and jQuery, PHP, SQL}}
-% 	% {\bodytext{Assembly: MIPS}}
-% }
-
-%\headedsection  % sets the header for the section and includes any subsections
-%  {Software, Frameworks, Miscellaneous}
-%  {\textsc{}} {%
-%
-%    {\bodytext{
-%    \LaTeX,
-%    Visual Studio 2013,
-%    MEAN Stack (MongoDB, Express, AngularJS, Node.js),
-%    ASP.NET Framework 4.0 and MVC,
-%    Microsoft SQL Studio Management and PHPMyAdmin,
-%    Terminal and Command Prompt,
-%    Git and Subversion
-%    }}
-%}
 \spacedhrule{0.5em}{-0.4em}
 
 \roottitle{Experience}
+
 \headedsection
-{\href{https://www.microsoft.com/en-ca/}{Microsoft}}
-{\textsc{Redmond, Washington}} {
-	\headedsubsection
-	{Software Engineer II}
-	{June \apo17 -- Present}
-	{\bodytext{
-		Enabled queries to be distributed seamlessly across many physical partitions\\
-		Enabled clients to read and write JSON documents in binary for faster reads, writes, and queries\\
-		Added support for seamless cross partition operations on the Compute Gateway\\
-		Automated query integration testing, which is now part of the weekly scrum and signoff requirements\\
-		Reworked the product's pagination story to allow for seamless scale up or down of cross partition operations \\
-		Added an end to end tracing story to reduce the time spent on high latency investigations
-	}}
-}
+  {\href{https://www.dremio.com/}{Dremio}}
+  {\textsc{Redmond, Washington}}{
+    \headedsubsection
+      {Senior Staff Software Engineer}
+      {May 2021 -- Present}
+      {\bodytext{
+        Directed the technical strategy for Query Planning\\
+        Enhanced Query Decorrelation to improve performance of correlated subqueries\\
+        Added support for complex data types\\
+        Added support for User Defined Functions (UDFs)
+      }}
+  }
+
 \headedsection
-{\href{https://www.microsoft.com/en-ca/}{Microsoft}}
-{\textsc{Redmond, Washington}} {
-	\headedsubsection
-	{Software Developer Intern}
-	{May \apo16 -- Aug \apo16}
-	{\bodytext{
-		Worked on DocumentDB: A distributed, cloud, and NoSQL database service\\
-		Developed a query engine testing framework that generates its own queries dynamically given a data set\\
-		Enabled developers to focus on query optimization and provided confidence to database users
-	}}
-}
+  {\href{https://www.microsoft.com/en-ca/}{Microsoft}}
+  {\textsc{Redmond, Washington}}{
+    \headedsubsection
+      {Software Engineer II}
+      {June 2017 -- April 2021}
+      {\bodytext{
+        Enabled seamless distribution of queries across multiple physical partitions\\
+        Optimized client performance by enabling binary read/write of JSON documents for faster operations\\
+        Implemented seamless cross-partition operations on the Compute Gateway\\
+        Automated query integration testing, now incorporated into the weekly scrum and sign-off process\\
+        Redesigned pagination to support scalable cross-partition operations\\
+        Developed end-to-end tracing to accelerate high-latency investigation and resolution
+      }}
+  }
+
 \headedsection
-{\href{http://www.epic.com/}{Epic Systems Corporation}}
-{\textsc{Madison, Wisconsin}} {
-	\headedsubsection
-	{Software Developer Intern}
-	{May \apo15 -- Aug \apo15}
-	{\bodytext{
-		Allowed doctors to run hypothesis tests to observe statistical differences between patient treatment groups\\
-		Extended Epic's HTML5 Canvas Graph API, which is used in many data visualizations applications\\
-		Fused statistics with data visualizations to provide critical information with a friendly UI/UX
-	}}
-}
+  {\href{https://www.microsoft.com/en-ca/}{Microsoft}}
+  {\textsc{Redmond, Washington}}{
+    \headedsubsection
+      {Software Developer Intern}
+      {May 2016 -- August 2016}
+      {\bodytext{
+        Worked on DocumentDB: A distributed, cloud, and NoSQL database service\\
+        Developed a query engine testing framework that generates queries dynamically from a data set\\
+        Enabled developers to focus on query optimization and provided confidence to database users
+      }}
+  }
+
 \headedsection
-{\href{http://www.nmsigroup.com/}{NMSI, Inc.}}
-{\textsc{Los Angeles, California}} {
-	\headedsubsection
-	{Software Developer Intern}
-	{May \apo14 -- Aug \apo14}
-	{\bodytext{
-		Maintained a loan origination system for a wholesale mortgage company\\
-		Optimized people's workflow through tooling leading to revenue growth\\
-		Maintained a MS-SQL database as well as a windows server host
-	}}
-}
+  {\href{http://www.epic.com/}{Epic Systems Corporation}}
+  {\textsc{Madison, Wisconsin}}{
+    \headedsubsection
+      {Software Developer Intern}
+      {May 2015 -- August 2015}
+      {\bodytext{
+        Allowed doctors to run hypothesis tests to observe statistical differences between patient treatment groups\\
+        Extended Epic's HTML5 Canvas Graph API, used across many data visualization applications\\
+        Fused statistical analysis with data visualizations for critical clinical insights
+      }}
+  }
+
 \headedsection
-{\href{http://www.illinois.edu/}{University of Illinois at Urbana-Champaign}}
-{\textsc{Urbana, Illinois}} {
-	\headedsubsection
-	{System Programming, Discrete Mathematics, and Intro to Programming TA}
-	{Aug \apo14 -- May \apo17}
-	{\bodytext{
-	}}
-}
+  {\href{http://www.nmsigroup.com/}{NMSI, Inc.}}
+  {\textsc{Los Angeles, California}}{
+    \headedsubsection
+      {Software Developer Intern}
+      {May 2014 -- August 2014}
+      {\bodytext{
+        Maintained a loan origination system for a wholesale mortgage company\\
+        Optimized workflow tools leading to revenue growth\\
+        Administered MS-SQL databases and Windows server environments
+      }}
+  }
+
+\headedsection
+  {\href{http://www.illinois.edu/}{University of Illinois at Urbana-Champaign}}
+  {\textsc{Urbana, Illinois}}{
+    \headedsubsection
+      {Teaching Assistant: Systems Programming, Discrete Mathematics, Intro to Programming}
+      {August 2014 -- May 2017}
+      {\bodytext{
+        Supported course instruction, assisted in grading and office hours
+      }}
+  }
+
 \spacedhrule{0.5em}{-0.4em}
 
-\roottitle{Projects}
-\headedsection
-{\href{brandonchong.net}{Cheating Detector for Programming Courses}}
-{\textit{Jan \apo15 -- May \apo17}} {
-	\bodytext {
-		Measures the similarity between all students for every assignment \\
-		Allows users to easily review/compare suspected matches and report them \\
-		Heavily utilizes variations of edit distance and logistic regressions
-	}
-}
-\headedsection
-{\href{brandonchong.net}{Automated Software Testing Infrastructure for Programming Courses}}
-{\textit{Jan \apo15 -- May \apo17}} {
-	\bodytext {
-		Eliminates the need for assignment writers to develop their own testing scripts \\
-		Allows all courses to grade their assignments just by creating a configuration file and unit tests \\
-		Uses python for the infrastructure and the unit tests can be in the writer's preferred language\\
-		Designed to grade system programming code with concurrency, I/O, and networking
-	}
-}
+\vspace{-0.2em}
+\begin{center}
+  Last update on \today\\
+  \emph{\small Please refer to my \href{http://www.brandonchong.net}{website} for a more detailed explanation of my experiences and projects along with some live demos.}\\
+  \href{http://www.brandonchong.net}{www.brandonchong.net}
+\end{center}
+
+%\roottitle{Projects}
+%\headedsection
+%{\href{brandonchong.net}{Cheating Detector for Programming Courses}}
+%{\textit{Jan \apo15 -- May \apo17}} {
+% \bodytext {
+%   Measures the similarity between all students for every assignment \\
+%   Allows users to easily review/compare suspected matches and report them \\
+%   Heavily utilizes variations of edit distance and logistic regressions
+% }
+%}
+%\headedsection
+%{\href{brandonchong.net}{Automated Software Testing Infrastructure for Programming Courses}}
+%{\textit{Jan \apo15 -- May \apo17}} {
+% \bodytext {
+%   Eliminates the need for assignment writers to develop their own testing scripts \\
+%   Allows all courses to grade their assignments just by creating a configuration file and unit tests \\
+%   Uses python for the infrastructure and the unit tests can be in the writer's preferred language\\
+%   Designed to grade system programming code with concurrency, I/O, and networking
+% }
+%}
 % \headedsection
 % {\textit{Jan \apo15 -- May \apo17}} {
-% 	\bodytext {
-% 		Static website blogging system to allow instructors to easily deploy assignment documentation\\
-% 		Grade reporting system to provide feedback and logs on assignment grading\\
-% 		Attendance tracker to allows students to swipe into lab section for attendance with ID cards\\
-% 		Contest page to display performance statistics on contest based assignments
-% 	}
+%   \bodytext {
+%     Static website blogging system to allow instructors to easily deploy assignment documentation\\
+%     Grade reporting system to provide feedback and logs on assignment grading\\
+%     Attendance tracker to allows students to swipe into lab section for attendance with ID cards\\
+%     Contest page to display performance statistics on contest based assignments
+%   }
 % }
 
 % \headedsection
 % {\href{.}{Github Wikibook to PDF Converter}}
 % {\textit{Jan \apo15 -- Aug\apo15}} {
-% 	\bodytext {
-% 		Converts the CS 241 Wikibook into a pdf that gets published into a physical book\\
-% 		Uses pandoc to convert markdown to latex and regex magic to make it suitable for publishing
-% 	}
+%   \bodytext {
+%     Converts the CS 241 Wikibook into a pdf that gets published into a physical book\\
+%     Uses pandoc to convert markdown to latex and regex magic to make it suitable for publishing
+%   }
 % }
 % \headedsection
 % {\href{.}{Automatic Course Registration Program}}
 % {\textit{Dec \apo14 }} {
-% 	\bodytext {
-% 		Monitors UIUC courses and automatically registers students when a slot opens up\\
-% 		Ran continuously on my raspberry pi and got all my in demand classes
-% 	}
+%   \bodytext {
+%     Monitors UIUC courses and automatically registers students when a slot opens up\\
+%     Ran continuously on my raspberry pi and got all my in demand classes
+%   }
 % }
 
-
-\vspace{-0.2em}
-\begin{center}
-	Last update on \today\\
-	\emph{\small Please refer to my \href{http://www.brandonchong.net}{website} for a more detailed explanation of my experiences and projects along with some live demos.}\\
-	\href{http://www.brandonchong.net}{www.brandonchong.net}
-\end{center}
-%\spacedhrule{1.6em}{-0.4em}
-
-%\roottitle{Interests}
-
-%\inlineheadsection
-%  {Non-exhaustive and in alphabetical order:}
-%  {art, Buddhim, cryptography, Go (board game), history, music, open source, philosophy, software engineering (methodologies), travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX}-design and vegetarian/vegan cooking.}
-
-
 \end{document}
+
